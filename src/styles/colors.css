@@ -1,0 +1,116 @@
+/* Standardized color palette for the Student Portal */
+
+/* Custom properties for consistent colors */
+:root {
+  /* Primary colors - Bootstrap blue */
+  --color-primary: #0d6efd;
+  --color-primary-dark: #0b5ed7;
+  --color-primary-light: #6ea8fe;
+  --color-primary-rgb: 13, 110, 253;
+  
+  /* Secondary colors - Bootstrap gray */
+  --color-secondary: #6c757d;
+  --color-secondary-dark: #5c636a;
+  --color-secondary-light: #adb5bd;
+  --color-secondary-rgb: 108, 117, 125;
+  
+  /* Success colors - Bootstrap green */
+  --color-success: #198754;
+  --color-success-dark: #146c43;
+  --color-success-light: #75b798;
+  --color-success-rgb: 25, 135, 84;
+  
+  /* Info colors - Bootstrap cyan */
+  --color-info: #0dcaf0;
+  --color-info-dark: #087990;
+  --color-info-light: #6edff6;
+  --color-info-rgb: 13, 202, 240;
+  
+  /* Warning colors - Bootstrap yellow */
+  --color-warning: #ffc107;
+  --color-warning-dark: #cc9a06;
+  --color-warning-light: #ffcd39;
+  --color-warning-rgb: 255, 193, 7;
+  
+  /* Danger colors - Bootstrap red */
+  --color-danger: #dc3545;
+  --color-danger-dark: #b02a37;
+  --color-danger-light: #e86674;
+  --color-danger-rgb: 220, 53, 69;
+  
+  /* Neutral colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+  
+  /* Background colors */
+  --color-bg-default: #f8f9fa;
+  --color-bg-paper: #ffffff;
+  --color-bg-muted: #e9ecef;
+  
+  /* Text colors - Improved for better readability */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6c757d;
+  --color-text-inverse: #ffffff;
+  
+  /* Border colors */
+  --color-border-light: #dee2e6;
+  --color-border-default: #ced4da;
+  --color-border-dark: #adb5bd;
+  
+  /* Bootstrap compatibility */
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: var(--color-primary-rgb);
+  --bs-secondary: var(--color-secondary);
+  --bs-secondary-rgb: var(--color-secondary-rgb);
+  --bs-success: var(--color-success);
+  --bs-success-rgb: var(--color-success-rgb);
+  --bs-info: var(--color-info);
+  --bs-info-rgb: var(--color-info-rgb);
+  --bs-warning: var(--color-warning);
+  --bs-warning-rgb: var(--color-warning-rgb);
+  --bs-danger: var(--color-danger);
+  --bs-danger-rgb: var(--color-danger-rgb);
+  --bs-light: var(--color-gray-100);
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark: var(--color-gray-900);
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-body-bg: var(--color-bg-default);
+  --bs-body-color: var(--color-text-primary);
+}
+
+/* Utility classes for consistent color usage */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-success { color: var(--color-success) !important; }
+.text-info { color: var(--color-info) !important; }
+.text-warning { color: var(--color-warning) !important; }
+.text-danger { color: var(--color-danger) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+
+.bg-primary { background-color: var(--color-primary) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-success { background-color: var(--color-success) !important; }
+.bg-info { background-color: var(--color-info) !important; }
+.bg-warning { background-color: var(--color-warning) !important; }
+.bg-danger { background-color: var(--color-danger) !important; }
+.bg-light { background-color: var(--color-gray-100) !important; }
+.bg-dark { background-color: var(--color-gray-800) !important; }
+
+.border-primary { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-success { border-color: var(--color-success) !important; }
+.border-info { border-color: var(--color-info) !important; }
+.border-warning { border-color: var(--color-warning) !important; }
+.border-danger { border-color: var(--color-danger) !important; }
+.border-light { border-color: var(--color-border-light) !important; }
+.border-dark { border-color: var(--color-border-dark) !important; }

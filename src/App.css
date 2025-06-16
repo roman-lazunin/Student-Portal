@@ -1,0 +1,11 @@
+/* Main App styles with Bootstrap integration */
+
+#root {
+  min-height: 100vh;
+  background-color: var(--color-bg-default);
+}
+
+/* Clean typography */
+.read-the-docs {
+  color: var(--color-text-muted);
+}

@@ -37,7 +37,7 @@ const courseDetails = {
 };
 
 export default function MyRegistrations() {
-  const { registeredCourses, unregisterCourse, loading, getRegisteredCourse } = useCourseRegistration();
+  const { registeredCourses, unregisterCourse, loading } = useCourseRegistration();
 
   const handleUnregister = (courseId) => {
     unregisterCourse(courseId);

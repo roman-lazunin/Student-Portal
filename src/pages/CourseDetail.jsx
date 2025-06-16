@@ -19,46 +19,7 @@ import {
 } from '@mui/icons-material';
 import { useCourseRegistration } from '../context/CourseRegistrationContext';
 import CourseRegistrationDialog from '../components/CourseRegistrationDialog';
-
-// Extended dummy data for demonstration
-const courses = [
-  {
-    id: 1,
-    title: 'Matematik',
-    name: 'Matematik',
-    description: 'Detaljerad information om Matematik.',
-    fullDescription: 'Denna kurs täcker grundläggande matematiska koncept inklusive algebra, geometri och statistik. Studenter kommer att utveckla problemlösningsförmågor och matematiskt tänkande.',
-    instructor: 'Dr. Anna Karlsson',
-    duration: '16 veckor',
-    credits: '15 hp',
-    schedule: 'Måndag och onsdag 9:00-12:00',
-    prerequisites: 'Grundläggande matematik från gymnasiet'
-  },
-  {
-    id: 2,
-    title: 'Programmering',
-    name: 'Programmering',
-    description: 'Detaljerad information om Programmering.',
-    fullDescription: 'En introduktionskurs i programmering som täcker grundläggande programmeringskoncept, datastrukturer och algoritmer. Fokus på Python och problemlösning.',
-    instructor: 'Prof. Erik Johansson',
-    duration: '20 veckor',
-    credits: '22.5 hp',
-    schedule: 'Tisdag och torsdag 13:00-17:00',
-    prerequisites: 'Inga förkunskaper krävs'
-  },
-  {
-    id: 3,
-    title: 'Historia',
-    name: 'Historia',
-    description: 'Detaljerad information om Historia.',
-    fullDescription: 'En omfattande genomgång av världshistoria från antiken till nutid. Kursen fokuserar på viktiga händelser, kulturer och samhällsförändringar.',
-    instructor: 'Dr. Maria Lindström',
-    duration: '18 veckor',
-    credits: '15 hp',
-    schedule: 'Fredag 9:00-15:00',
-    prerequisites: 'Grundläggande historiakunskaper'
-  },
-];
+import { COURSES } from '../utils/constants';
 
 export default function CourseDetail() {
   const { id } = useParams();
@@ -67,7 +28,7 @@ export default function CourseDetail() {
   const [registrationDialogOpen, setRegistrationDialogOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   
-  const course = courses.find((c) => String(c.id) === String(id));
+  const course = COURSES.find((c) => String(c.id) === String(id));
 
   useEffect(() => {
     if (error) {

@@ -1,19 +1,12 @@
 import React, { createContext, useContext, useReducer } from 'react';
-
-// Initial state
-const initialState = {
-  registeredCourses: [],
-  studentInfo: null,
-  loading: false,
-  error: null
-};
-
-// Actions
-const REGISTER_COURSE = 'REGISTER_COURSE';
-const UNREGISTER_COURSE = 'UNREGISTER_COURSE';
-const SET_STUDENT_INFO = 'SET_STUDENT_INFO';
-const SET_LOADING = 'SET_LOADING';
-const SET_ERROR = 'SET_ERROR';
+import {
+  REGISTER_COURSE,
+  UNREGISTER_COURSE, 
+  SET_STUDENT_INFO,
+  SET_LOADING,
+  SET_ERROR,
+  initialState
+} from './courseRegistrationTypes';
 
 // Reducer
 function courseRegistrationReducer(state, action) {

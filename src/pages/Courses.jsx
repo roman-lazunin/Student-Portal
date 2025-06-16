@@ -8,25 +8,8 @@ import {
 import { School, CheckCircle, PersonAdd } from "@mui/icons-material";
 import { useCourseRegistration } from "../context/CourseRegistrationContext";
 import CourseRegistrationDialog from "../components/CourseRegistrationDialog";
+import { COURSES } from "../utils/constants";
 import "./Courses.css";
-
-const courses = [
-  {
-    id: 1,
-    name: "Matematik",
-    description: "Grundläggande matematik för gymnasiet.",
-  },
-  {
-    id: 2,
-    name: "Programmering",
-    description: "Introduktion till programmering och problemlösning.",
-  },
-  {
-    id: 3,
-    name: "Historia",
-    description: "Världshistoria från antiken till nutid.",
-  },
-];
 
 export default function Courses() {
   const { unregisterCourse, isRegistered, loading, error, clearError } = useCourseRegistration();
@@ -69,8 +52,7 @@ export default function Courses() {
         </div>
       </div>
       
-      <div className="row g-4">
-        {courses.map((course) => {
+      <div className="row g-4">            {COURSES.map((course) => {
           const registered = isRegistered(course.id);
           
           return (

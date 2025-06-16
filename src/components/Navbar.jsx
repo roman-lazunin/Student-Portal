@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Badge,
-  useTheme
-} from '@mui/material';
+import { Badge } from '@mui/material';
 import { School, Home, Article, MenuBook, Assignment } from '@mui/icons-material';
 import { useCourseRegistration } from '../context/CourseRegistrationContext';
+import { APP_CONFIG } from '../utils/constants';
 
 const Navbar = () => {
   const location = useLocation();
-  const theme = useTheme();
   const { registeredCourses } = useCourseRegistration();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +24,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link className="navbar-brand d-flex align-items-center fw-bold" to="/">
           <School className="me-2" />
-          StudentPortal
+          {APP_CONFIG.name}
         </Link>
 
         <button 

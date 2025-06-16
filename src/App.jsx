@@ -14,6 +14,7 @@ import CourseDetail from './pages/CourseDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/colors.css';
+import './styles/global.css';
 import './styles/main.css';
 import './responsive.css';
 

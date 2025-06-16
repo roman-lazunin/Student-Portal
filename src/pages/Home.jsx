@@ -11,6 +11,7 @@ import {
   ArrowForward
 } from "@mui/icons-material";
 import { useCourseRegistration } from "../context/CourseRegistrationContext";
+import { COURSES } from "../utils/constants";
 import "../styles/pages/home.css";
 
 export default function Home() {

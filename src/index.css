@@ -50,6 +50,8 @@ a:hover {
   color: var(--color-primary-dark);
   text-decoration: underline;
 }
-.p-3 { padding: 1rem; }
-.p-4 { padding: 1.5rem; }
-.p-5 { padding: 3rem; }
+
+/* Clean typography */
+.read-the-docs {
+  color: var(--color-text-muted);
+}

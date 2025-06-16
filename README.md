@@ -63,10 +63,12 @@ src/
 ├── context/            # React Context providers
 │   └── CourseRegistrationContext.jsx
 ├── styles/             # CSS and styling
-│   ├── bootstrap-custom.css  # Custom Bootstrap enhancements
-│   ├── global.css      # Global styles
+│   ├── colors.css      # Color system and CSS variables
+│   ├── global.css      # Global utility classes
+│   ├── main.css        # Main stylesheet
 │   └── pages/          # Page-specific styles
-└── constants/          # Application constants
+└── utils/              # Utilities and constants
+    └── constants.js    # Application constants and data
 ```
 
 ## Bootstrap Integration

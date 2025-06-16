@@ -17,13 +17,7 @@ import {
 } from '@mui/material';
 import { Person, Email, School } from '@mui/icons-material';
 import { useCourseRegistration } from '../context/CourseRegistrationContext';
-
-// Available courses for registration
-const availableCourses = [
-  { id: 1, name: 'Matematik', title: 'Matematik', description: 'Grundläggande matematik för gymnasiet.' },
-  { id: 2, name: 'Programmering', title: 'Programmering', description: 'Introduktion till programmering och problemlösning.' },
-  { id: 3, name: 'Historia', title: 'Historia', description: 'Världshistoria från antiken till nutid.' }
-];
+import { COURSES } from '../utils/constants';
 
 export default function CourseRegistrationDialog({ open, onClose, preselectedCourseId = null }) {
   const { registerCourse, loading } = useCourseRegistration();
@@ -94,7 +88,7 @@ export default function CourseRegistrationDialog({ open, onClose, preselectedCou
     setIsSubmitting(true);
     
     try {
-      const selectedCourse = availableCourses.find(course => String(course.id) === String(formData.courseId));
+      const selectedCourse = COURSES.find(course => String(course.id) === String(formData.courseId));
       
       if (selectedCourse) {
         // Add student info to the course object
@@ -134,7 +128,7 @@ export default function CourseRegistrationDialog({ open, onClose, preselectedCou
     onClose();
   };
 
-  const selectedCourse = availableCourses.find(course => String(course.id) === String(formData.courseId));
+  const selectedCourse = COURSES.find(course => String(course.id) === String(formData.courseId));
 
   if (success) {
     return (
@@ -163,13 +157,7 @@ export default function CourseRegistrationDialog({ open, onClose, preselectedCou
       
       <form onSubmit={handleSubmit}>
         <DialogContent>
-          {preselectedCourseId && (
-            <Alert severity="info" sx={{ mb: 3 }}>
-              <Typography variant="body2">
-                <strong>Vald kurs:</strong> {availableCourses.find(c => String(c.id) === String(preselectedCourseId))?.name}
-              </Typography>
-            </Alert>
-          )}
+
           
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
             Fyll i formuläret nedan för att registrera dig för en kurs.
@@ -212,7 +200,7 @@ export default function CourseRegistrationDialog({ open, onClose, preselectedCou
                 onChange={handleInputChange('courseId')}
                 label="Välj kurs"
               >
-                {availableCourses.map((course) => (
+                {COURSES.map((course) => (
                   <MenuItem key={course.id} value={String(course.id)}>
                     <Box>
                       <Typography variant="body1">{course.name}</Typography>
@@ -230,15 +218,7 @@ export default function CourseRegistrationDialog({ open, onClose, preselectedCou
               )}
             </FormControl>
 
-            {selectedCourse && (
-              <Alert severity="info">
-                <Typography variant="body2">
-                  <strong>Vald kurs:</strong> {selectedCourse.name}
-                  <br />
-                  {selectedCourse.description}
-                </Typography>
-              </Alert>
-            )}
+
           </Box>
         </DialogContent>
 

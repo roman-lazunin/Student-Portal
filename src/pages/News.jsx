@@ -1,37 +1,7 @@
 import React from "react";
 import { Article, CalendarToday } from "@mui/icons-material";
+import { NEWS_ITEMS } from "../utils/constants";
 import "../styles/pages/news.css";
-
-const news = [
-  { 
-    id: 1, 
-    title: "Välkommen till nya portalen!", 
-    content: "Vi har lanserat en ny version av studentportalen med förbättrad användarvänlighet och nya funktioner för att underlätta dina studier.",
-    date: "2025-06-15",
-    category: "System"
-  },
-  { 
-    id: 2, 
-    title: "Tentamensschema publicerat", 
-    content: "Nu finns vårens tentamensschema tillgängligt. Kontrollera dina kurser och boka tentamenstider i god tid.",
-    date: "2025-06-14",
-    category: "Tentamen"
-  },
-  { 
-    id: 3, 
-    title: "Ny kursregistrering öppnad", 
-    content: "Registrering för höstterminens kurser är nu öppen. Glöm inte att registrera dig innan deadline den 30 juni.",
-    date: "2025-06-10",
-    category: "Kursregistrering"
-  },
-  { 
-    id: 4, 
-    title: "Biblioteket utökar öppettider", 
-    content: "Under tentamensperioden kommer biblioteket att ha utökade öppettider för att ge er bättre studietillfällen.",
-    date: "2025-06-08",
-    category: "Campus"
-  }
-];
 
 export default function News() {
   return (
@@ -43,7 +13,7 @@ export default function News() {
       </div>
       
       <div className="row g-4">
-        {news.map((item) => (
+        {NEWS_ITEMS.map((item) => (
           <div className="col-12 col-md-6 col-xl-4" key={item.id}>
             <div className="card h-100 shadow-sm border-0">
               <div className="card-body d-flex flex-column">
@@ -73,7 +43,7 @@ export default function News() {
         ))}
       </div>
       
-      {news.length === 0 && (
+      {NEWS_ITEMS.length === 0 && (
         <div className="row">
           <div className="col-12 text-center py-5">
             <div className="text-muted">

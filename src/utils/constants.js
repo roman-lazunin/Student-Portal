@@ -43,14 +43,6 @@ export const COURSES = [
   }
 ];
 
-// Application navigation items
-export const NAV_ITEMS = [
-  { path: '/', label: 'Hem', icon: 'Home' },
-  { path: '/courses', label: 'Kurser', icon: 'MenuBook' },
-  { path: '/my-registrations', label: 'Mina Kurser', icon: 'Assignment' },
-  { path: '/news', label: 'Nyheter', icon: 'Article' }
-];
-
 // News data
 export const NEWS_ITEMS = [
   {
@@ -81,10 +73,5 @@ export const NEWS_ITEMS = [
 
 // Application settings
 export const APP_CONFIG = {
-  name: 'StudentPortal',
-  version: '1.0.0',
-  description: 'Student Portal för kursregistrering och information',
-  supportEmail: 'support@studentportal.se',
-  maxRegistrations: 5,
-  registrationDeadline: '2024-12-15'
+  name: 'StudentPortal'
 };

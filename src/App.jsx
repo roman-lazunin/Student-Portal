@@ -16,7 +16,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/colors.css';
 import './styles/global.css';
 import './styles/main.css';
-import './responsive.css';
 
 // Create Material UI theme with consistent colors
 const theme = createTheme({
